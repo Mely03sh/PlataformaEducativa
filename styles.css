@@ -1,0 +1,44 @@
+/* Estilizar la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+   }
+   
+   nav li {
+    float: left;
+   }
+   
+   nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+   
+   nav li a:hover {
+    background-color: #111;
+   }
+   
+   /* Estilizar el mensaje de bienvenida e imagen */
+   .welcome-message {
+    text-align: center;
+    padding: 20px;
+   }
+   
+   .welcome-message img {
+    float: right;
+    margin-left: 20px;
+   }
+   
+   /* Estilizar el pie de página */
+   footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+   }
+   

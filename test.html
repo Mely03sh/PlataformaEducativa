@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario - Tu Plataforma Educativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #84bef7;
+            flex-direction: column; /* Añadido para organizar verticalmente */
+            min-height: 100vh; /* Añadido para ocupar al menos la altura completa de la pantalla */
+        }
+
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .questionnaire-form {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #e7753c;
+            border-radius: 10px;
+            background-color: #fff;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Añadido espacio entre el formulario y el footer */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CUESTIONARIO PARA EVALUACIÓN PSICOLÓGICA Y EMOCIONAL</h1>
+
+    <div class="questionnaire-form">
+        <h2>Queremos conocerte mejor</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+            </div>
+
+            <div class="form-group">
+                <label for="psicologia">¿Cómo consideras tu estado psicológico actualmente?</label>
+                <select id="psicologia" name="psicologia" required>
+                    <option value="positivo">Positivo</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="negativo">Negativo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>¿Cómo describirías tus emociones en este momento? (Selecciona todas las que apliquen)</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="emocion1" name="emociones[]" value="feliz">
+                        Feliz
+                    </label>
+                    <label>
+                        <input type="checkbox" id="emocion2" name="emociones[]" value="triste">
+                        Triste
+                    </label>
+                    <label>
+                        <input type="checkbox" id="emocion3" name="emociones[]" value="ansioso">
+                        Ansioso
+                    </label>
+                    <label>
+                        <input type="checkbox" id="emocion4" name="emociones[]" value="emocionado">
+                        Emocionado
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="expectativas">¿Qué esperas obtener de nuestra plataforma educativa?</label>
+                <textarea id="expectativas" name="expectativas" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="preferencias">¿Tienes preferencias específicas sobre el formato de aprendizaje?</label>
+                <textarea id="preferencias" name="preferencias" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tiempoEstudio">¿Cuánto tiempo estimas que puedes dedicar al estudio diariamente?</label>
+                <input type="text" id="tiempoEstudio" name="tiempoEstudio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="motivacion">¿Qué te motiva a estudiar en línea?</label>
+                <textarea id="motivacion" name="motivacion" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </div>
+</body>
+
+</html>

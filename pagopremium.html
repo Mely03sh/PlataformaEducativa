@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Plan Básico</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f3f5f8;
+            color: #333;
+        }
+
+        h2 {
+            color: #0598fa;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 2px solid #dd9762;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .payment-option {
+            width: 48%;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-option img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #fa9805;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .plan-info {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #0598fa;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            color: #ecf0f1;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            color: #ecf0f1;
+        }
+
+        .footer img {
+            height: 30px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pago del Plan Premium</h2>
+
+    <!-- Formulario para el Plan Básico -->
+    <form id="basico-form">
+        <input type="hidden" name="plan" value="basico">
+
+        <label for="nombreBasico">Nombre:</label>
+        <input type="text" id="nombreBasico" name="nombre" required>
+
+        <label for="emailBasico">Correo Electrónico:</label>
+        <input type="email" id="emailBasico" name="email" required>
+
+        <div class="payment-options">
+            <div class="payment-option" onclick="selectMedioPago('daviplata')">
+                <img src="daviplata.jpg" alt="Daviplata">
+            </div>
+            <div class="payment-option" onclick="selectMedioPago('Bancolombia')">
+                <img src="bancolombia.jpg" alt="Bancolombia">
+            </div>
+            <div class="payment-option" onclick="selectMedioPago('Nequi')">
+                <img src="nequi.jpg" alt="Nequi">
+            </div>
+            <div class="payment-option" onclick="selectMedioPago('Efecty')">
+                <img src="efecty.jpg" alt="Efecty">
+            </div>
+            <div class="payment-option" onclick="selectMedioPago('Pse')">
+                <img src="pse.jpg" alt="PSE">
+            </div>
+        </div>
+
+        <button type="submit">Pagar Plan Premium</button>
+
+        <div class="plan-info">
+            <p>Valor del Plan Premium: $XX</p>
+        </div>
+    </form>
+
+    <script>
+        function selectMedioPago(medioPago) {
+            // Puedes implementar lógica adicional aquí, como cambiar estilos o realizar acciones específicas al seleccionar un medio de pago.
+            console.log('Medio de Pago Seleccionado:', medioPago);
+        }
+    </script>
+    <br>
+     <footer class="footer">
+        <a href="https://www.facebook.com/"><img src="Facebook_icon.svg.png" alt="Facebook Icon"></a>
+        <a href="https://www.whatsapp.com/"><img
+                src="png-transparent-computer-icons-logo-whatsapp-whatsapp-text-logo-whatsapp-icon.png"
+                alt="WhatsApp Icon"></a>
+        <a href="https://www.tiktok.com/"><img src="4834215.png" alt="TikTok Icon"></a>
+        <p>Teléfono: 123-456-7890</p>
+        <p>Dirección: 123 Main St, Anytown, USA</p>
+    </footer>
+</body>
+</html>
+
+
+
+
